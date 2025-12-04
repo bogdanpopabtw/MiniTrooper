@@ -26,17 +26,13 @@
    justify-content: center;
    gap: 1rem;
    padding: 1rem;
-   max-width: 900px;
+   max-width: 1000px;
    margin: 0 auto;
 }
 
 .left-container, .right-container {
     flex: 1 1 300px;
     min-width: 300px;
-}
-
-.left-container-button {
-    
 }
 
 .button {
@@ -54,28 +50,73 @@
     gap: 1rem;
     border: 1px solid gray;
     border-radius: 5px;
-    padding: 0.5rem;
+    padding: 0.7rem;
     margin: 1rem 0;
 }
 
-.recipe-container img {
-
+.recipe-container h3 {
+    margin-bottom: 0.5rem;
 }
 
-.cancel-button {
+.recipe-container img {
+    width: 5rem;
+    height: 3rem;
+}
+
+.red-button {
     padding: 0.5rem;
     background: rgb(255, 99, 71);
     border-radius: 5px;
     color: #ffff;
     border: none;
-    margin-bottom: 1rem;;
 }
 
-.form-group {
+.form-group{
     margin-bottom: 1rem;
+}
+
+.form-group h5 {
+    margin-bottom: 0.3rem;
+}
+
+.form-group textarea {
+    height: 7rem;
+    resize: none;
 }
 
 .right-container-input {
     width: 100%;
+    padding: 0.3rem;
+}
+
+.add-ingredient-container {
+    margin-bottom: 1rem;
+}
+
+.add-ingredient {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    
+}
+
+.ingredient-name {
+    width: 60%;
+    padding: 0.3rem;
+}
+
+.ingredient-qty {
+    width: 20%;
+    padding: 0.3rem;
+}
+
+.add-ingredient-button {
+    padding: 0.5rem;
+    background: rgb(72, 158, 72);
+    border-radius: 5px;
+    color: #ffff;
+    border: none;
+    margin: 1rem 0;
 }
 

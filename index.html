@@ -16,7 +16,7 @@
     </div>
     <div class="container">
         <div class="left-container">
-            <div class="left-container-button">
+            <div>
                 <input type="button" value="New Recipe" class="button">
             </div>
             <hr>
@@ -27,7 +27,7 @@
                         <p>Lorem ipsum</p>
                     </div>
                     <div class="recipe-image">
-                        <img src="toast.jpg" alt="Toast Image">
+                        <img src="/images/toast.webp" alt="Toast Image">
                     </div>
                 </div>
                 <div class="recipe-container">
@@ -36,15 +36,15 @@
                         <p>Lorem ipsum</p>
                     </div>
                     <div class="recipe-image">
-                        <img src="avocado.jpg" alt="Avocado Image">
+                        <img src="/images/avocado.jpg" alt="Avocado Image">
                     </div>
                 </div>
-            </div> 
+            </div>
         </div>
         <div class="right-container">
             <div class="right-container-buttons">
                 <input type="button" value="Save" class="button">
-                <input type="button" value="Cancel" class="cancel-button">
+                <input type="button" value="Cancel" class="red-button">
             </div>
             <div class="form-group">
                 <h5>Name</h5>
@@ -56,19 +56,22 @@
             </div>
             <div class="form-group">
                 <h5>Description</h5>
-                <textarea class="right-container-input" placeholder="Introduceți descrierea rețetei"></textarea>
+                <textarea class="right-container-input" placeholder="Cartofi, morcovi, ceapa etc."></textarea>
             </div>
-            <div class="add-ingredient">
-                <input type="text" value="Add Ingredient">
-                <input type="number" value="Cantitate">
-                <button type="button"class="delete-button">X</button>
+            <div class="add-ingredient-container">
+                <div class="add-ingredient">
+                    <input class="ingredient-name" type="text" value="Add Ingredient">
+                    <input class="ingredient-qty" type="number" value="Cantitate">
+                    <button type="button" class="red-button">X</button>
+                </div>
+                <div class="add-ingredient">
+                    <input class="ingredient-name" type="text" value="Add Ingredient">
+                    <input class="ingredient-qty" type="number" value="Cantitate">
+                    <button type="button" class="red-button">X</button>
+                </div>
             </div>
-            <div class="add-ingredient">
-                <input type="text" value="Add Ingredient">
-                <input type="number" value="Cantitate">
-                <button type="button"class="delete-button">X</button>
-            </div>
-            <button type="submit" class="button">Add Ingredient</button>
+            <hr>
+            <button type="submit" class="add-ingredient-button">Add Ingredient</button>
         </div>
     </div>
 
