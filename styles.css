@@ -4,20 +4,40 @@
     box-sizing: border-box;
 }
 
-:root {
-    --pading-base: 1rem;
-}
-
 .navbar {
     background-color: rgb(234, 233, 233);
-    padding: var(--pading-base);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    color: gray;
     text-decoration: none;
 }
 
-.navbar a{
+.nav-items a {
     text-decoration: none;
     color: gray;
     margin-left: 1rem;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;               /* distanța între linii */
+    padding: 8px 10px;        /* spațiu între border și linii */
+    border: 1px solid gray;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 24px;            /* fix pentru consistență */
+    height: 3px;
+    background: gray;
+    border-radius: 2px;
 }
 
 .container {
@@ -41,7 +61,7 @@
     border-radius: 5px;
     color: #ffff;
     border: none;
-    margin-bottom: 1rem;;
+    margin-bottom: 1rem;
 }
 
 .recipe-container {
@@ -97,8 +117,7 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 0.5rem;
-    
+    margin-bottom: 0.5rem; 
 }
 
 .ingredient-name {
@@ -118,5 +137,57 @@
     color: #ffff;
     border: none;
     margin: 1rem 0;
+}
+
+
+@media (max-width: 1200px) {
+.hamburger {
+    display: flex;
+    margin-left: auto;
+}
+
+.navbar {
+    min-width: 200px;
+}
+
+.nav-items {
+    position: absolute;
+    right: 0;
+    top: 6%;
+    background: rgb(234,233,233);
+    width: 100%;
+    padding: 0 1rem;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: max-height 0.35s ease,
+                opacity 0.3s ease,
+                transform 0.3s ease;
+}
+
+.nav-items.show {
+    display: flex;
+    flex-direction: column;
+    max-height: 300px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav-items a {
+    padding: 0.7rem 0;
+    margin: 0;
+}
+
+.container {
+        flex-direction: column;  
+        align-items: stretch;    
+}
+
+.left-container, .right-container {
+        flex: 1 1 100%;  
+        min-width: 0;    
+    }
+
 }
 

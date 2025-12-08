@@ -10,9 +10,17 @@
 
 <body>
     <div class="navbar">
-        <a href="index.html">Recipe Book</a>
-        <a href="index.html">Authentificate</a>
-        <a href="index.html">Shopping List</a>
+        <a href="index.html" class="logo">Recipe Book</a>
+
+        <div class="nav-items">
+            <a href="#" class="navbar-hidden-item">Authentificate</a>
+            <a href="#" class="navbar-hidden-item">Shopping List</a>
+        </div>
+        <button class="hamburger" id="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
     </div>
     <div class="container">
         <div class="left-container">
@@ -20,29 +28,29 @@
                 <input type="button" value="New Recipe" class="button">
             </div>
             <hr>
-            <div class="recipe-list">
+            <div>
                 <div class="recipe-container">
-                    <div class="recipe-text">
+                    <div>
                         <h3>Toast</h3>
                         <p>Lorem ipsum</p>
                     </div>
-                    <div class="recipe-image">
+                    <div>
                         <img src="/images/toast.webp" alt="Toast Image">
                     </div>
                 </div>
                 <div class="recipe-container">
-                    <div class="recipe-text">
+                    <div>
                         <h3>Avocado</h3>
                         <p>Lorem ipsum</p>
                     </div>
-                    <div class="recipe-image">
+                    <div>
                         <img src="/images/avocado.jpg" alt="Avocado Image">
                     </div>
                 </div>
             </div>
         </div>
         <div class="right-container">
-            <div class="right-container-buttons">
+            <div>
                 <input type="button" value="Save" class="button">
                 <input type="button" value="Cancel" class="red-button">
             </div>
@@ -60,12 +68,12 @@
             </div>
             <div class="add-ingredient-container">
                 <div class="add-ingredient">
-                    <input class="ingredient-name" type="text" value="Add Ingredient">
+                    <input class="ingredient-name" type="text">
                     <input class="ingredient-qty" type="number" value="Cantitate">
                     <button type="button" class="red-button">X</button>
                 </div>
                 <div class="add-ingredient">
-                    <input class="ingredient-name" type="text" value="Add Ingredient">
+                    <input class="ingredient-name" type="text">
                     <input class="ingredient-qty" type="number" value="Cantitate">
                     <button type="button" class="red-button">X</button>
                 </div>
@@ -74,7 +82,7 @@
             <button type="submit" class="add-ingredient-button">Add Ingredient</button>
         </div>
     </div>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
