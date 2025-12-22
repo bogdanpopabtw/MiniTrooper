@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html" class="logo">Recipe Book</a>
+
+        <div class="nav-items">
+            <a href="#" class="navbar-hidden-item">Authentificate</a>
+            <a href="#" class="navbar-hidden-item">Shopping List</a>
+        </div>
+        <button class="hamburger" id="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+    </div>
+    <div class="container">
+        <div class="left-container">
+            <div>
+                <input type="button" value="New Recipe" class="button button-hover">
+            </div>
+            <hr>
+            <div>
+                <div class="recipe-container">
+                    <div>
+                        <h3>Toast</h3>
+                        <p>Lorem ipsum</p>
+                    </div>
+                    <div>
+                        <img src="/images/toast.webp" alt="Toast Image">
+                    </div>
+                </div>
+                <div class="toast-options">
+                    <h5>Alegeti ingredientele:</h5>
+                    <div class="ingredients">
+                        <div class="ingredients-item">
+                            <label>
+                                <input type="checkbox" name="ingredient" value="Salata verde">
+                                Salata verde
+                            </label>
+                        </div>
+
+                        <div class="ingredients-item">
+                            <label>
+                                <input type="checkbox" name="ingredient" value="Rosii">
+                                Rosii
+                            </label>
+                        </div>
+
+                        <div class="ingredients-item">
+                            <label>
+                                <input type="checkbox" name="ingredient" value="Ceapa rosie">
+                                Ceapa rosie
+                            </label>
+                        </div>
+
+                        <div class="ingredients-item">
+                            <label>
+                                <input type="checkbox" name="ingredient" value="Porumb">
+                                Porumb
+                            </label>
+                        </div>
+                    </div>
+                    <h5>Alegeti sosul:</h5>
+                    <div class="ingredients">
+                        <div class="ingredients-item">
+                            <label>
+                                <input type="checkbox" name="sos" value="Tzatziki">
+                                Tzatziki
+                            </label>
+                        </div>
+                        <div class="ingredients-item">
+                            <label>
+                                <input type="checkbox" name="sos" value="Ketchup dulce">
+                                Ketchup dulce
+                            </label>
+                        </div>
+                        <div class="ingredients-item">
+                            <label>
+                                <input type="checkbox" name="sos" value="Ketchup picant">
+                                Ketchup picant
+                            </label>
+                        </div>
+                    </div>
+                    <h5>Doriti tacamuri?</h5>
+                    <div class="ingredients">
+                        <div class="ingredients-item">
+                            <label>
+                                <input type="radio" name="tacamuri" value="Da">
+                                Da
+                            </label>
+                        </div>
+                        <div class="ingredients-item">
+                            <label>
+                                <input type="radio" name="tacamuri" value="Nu">
+                                Nu
+                            </label>
+                        </div>
+                    </div>
+                    <h5>Adresa de livrare si numarul de contact</h5>
+                    <textarea placeholder="Ex: Str. Popesti, nr.1, ap 10"></textarea>
+                </div>
+                <div class="recipe-container">
+                    <div>
+                        <h3>Avocado</h3>
+                        <p>Lorem ipsum</p>
+                    </div>
+                    <div>
+                        <img src="/images/avocado.jpg" alt="Avocado Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-container">
+            <div>
+                <input type="button" value="Save" class="button button-hover">
+                <input type="button" value="Cancel" class="red-button button-hover">
+            </div>
+            <div class="form-group">
+                <h5>Name</h5>
+                <input class="right-container-input" type="text">
+            </div>
+            <div class="form-group">
+                <h5>Image URL</h5>
+                <input class="right-container-input" type="text">
+            </div>
+            <div>
+                <img src="images/fries.avif" alt="french fries">
+            </div>
+            <form>
+                <div class="form-group">
+                    <h5>Description</h5>
+                    <textarea class="right-container-input" placeholder="Cartofi, morcovi, ceapa etc."></textarea>
+                </div>
+                <div class="add-ingredient-container">
+                    <div class="add-ingredient">
+                        <input class="ingredient-name" type="text" required>
+                        <input class="ingredient-qty" type="number" required>
+                        <button type="button" class="red-button button-hover">X</button>
+                    </div>
+                    <div class="add-ingredient">
+                        <input class="ingredient-name" type="text" required>
+                        <input class="ingredient-qty" type="number" required>
+                        <button type="button" class="red-button button-hover">X</button>
+                    </div>
+                </div>
+                <hr>
+                <button type="submit" class="add-ingredient-button button-hover">Add Ingredient</button>
+            </form>
+        </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
