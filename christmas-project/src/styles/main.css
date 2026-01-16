@@ -1,0 +1,337 @@
+@font-face {
+  font-family: 'Roboto';
+  src:url('/fonts/Roboto-Bold.woff') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body, input, select, textarea, label, button, option {
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-bold);
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    'header header header'
+    'nav nav nav'
+    'aside main main'
+    'footer footer footer';
+  gap: var(--spacing-medium);
+  min-height: 100vh;
+  padding: var(--spacing-medium);
+  background-color: var(--color-light-gray);
+}
+  
+.header {
+  grid-area: header;
+  background: var(--color-christmas-green);
+  color: var(--color-snow-white);
+  padding: var(--spacing-large);
+  text-align: center;
+  border-radius: var(--border-radius);
+}
+
+.nav {
+  grid-area: nav;
+  background-color: var(--color-snow-white);
+  padding: var(--spacing-large);
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+  padding: var(--spacing-medium);
+}
+
+.nav h2 {
+  color: var(--color-christmas-green);
+}
+
+#filter-form {
+  display: flex;
+  align-items: flex-end; 
+  gap: var(--spacing-small);  
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;   
+  gap: var(--spacing-small);        
+  flex: 1 1 0;              
+}
+
+.filter-group input,
+.filter-group select {
+  width: 100%;
+  height: 2rem;
+  padding: 0 var(--spacing-small);
+  font-size: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+}
+
+.filter-group ::placeholder {
+  font-weight: lighter;
+}
+
+.form-buttons {
+  display: flex;
+  gap: var(--spacing-medium);
+}
+
+.form-buttons button {
+  height: 2rem;
+  width: 8rem;
+  padding: var(--spacing-small);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+form button:active,
+button.click-effect {
+  transform: scale(0.97);
+  box-shadow: 0 0 3px rgba(0,0,0,0.3); 
+}
+
+.form-buttons button.active {
+  border: 2px solid gold;
+  box-shadow: var(--color-shadow);
+}
+
+.form-buttons button[type="submit"] {
+  background-color: var(--color-christmas-red);
+  color: var(--color-snow-white);
+} 
+
+.form-buttons button[type="button"] {
+  background-color: var(--color-dark-gray);
+  color: var(--color-snow-white);
+}
+
+.main {
+  grid-area: main;
+  background-color: var(--color-snow-white);
+  padding: var(--spacing-large);
+  border-radius: var(--border-radius);
+}
+
+.main h2 {
+  color: var(--color-christmas-green);
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--spacing-small);
+}
+
+.pagination button {
+  padding: var(--spacing-small);
+  border-radius: var(--border-radius);
+  border: var(--color-border);
+  color: var(--color-dark-gray);
+  cursor: pointer;
+  transition: background-color 0.5s ease ;
+}
+
+.pagination button.active {
+  background-color: var(--color-christmas-red);
+  color: var(--color-snow-white);
+}
+
+#pagination-bottom {
+  margin-top: var(--spacing-medium);
+}
+
+#employees-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+  margin-top: var(--spacing-medium);
+}
+
+.employee-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--spacing-medium);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.employee-header.active {
+  border: 2px solid gold;
+}
+
+.employee-name {
+  font-size: var(--spacing-medium);
+}
+
+.status-badge {
+  padding: 0.2rem var(--spacing-small);
+  border-radius: 15px;
+  color: var(--color-snow-white);
+  font-size: var(--spacing-medium);
+  text-transform: uppercase;
+}
+
+.status-badge.good {
+  background-color: var(--color-christmas-green);
+}
+
+.status-badge.naughty {
+  background-color: var(--color-christmas-red);
+}
+
+.accordion-icon {
+  font-size: var(--spacing-medium);  
+}
+
+.employee-details {
+  display: none;
+}
+
+.employee-details.open {
+  padding: var(--spacing-small);
+  border: 2px solid var(--color-border);
+  border-radius: var(--border-radius);
+}
+
+.employee-details dl {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  column-gap: 1rem;
+  align-items: baseline;
+  gap: var(--spacing-small);
+}
+
+.employee-details dd {
+  min-width: 0;                 
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.aside {
+  grid-area: aside;
+  background-color: var(--color-snow-white);
+  padding: var(--spacing-large);
+  border-radius: var(--border-radius);
+}
+
+.aside h2,
+.aside h3 {
+  color: var(--color-christmas-red);
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: var(--spacing-small);
+  background-color: var(--color-light-gray);
+  margin-bottom: var(--spacing-medium);
+  border-radius: var(--border-radius);
+}
+
+.stats strong {
+  color: var(--color-christmas-green);
+}
+
+.recent-employees-list {
+  padding: 0;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: var(--color-christmas-green);
+  color: var(--color-snow-white);
+  text-align: center;
+  padding: var(--spacing-medium);
+  border-radius: var(--border-radius);
+}
+
+@media (max-width: 1024px) {
+  .container {
+   grid-template-areas:
+    'header header header'
+    'nav nav nav'
+    'main main main'
+    'aside aside aside'
+    'footer footer footer';
+  }
+
+  #filter-form {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .filter-group {
+    width: 50%;
+    box-sizing: border-box;
+  }
+
+  .filter-group select,
+  .filter-group input {
+    width: 100%;
+  }
+
+  .form-buttons {
+    width: 100%;
+    gap: var(--spacing-small);
+  }
+
+  .form-buttons button {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  #filter-form {
+    flex-direction: column;
+  }
+
+  .filter-group {
+    width: 100%;
+    margin-bottom: var(--spacing-small);
+  }
+
+  .form-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: var(--spacing-small);
+  }
+
+  .form-buttons button {
+    width: 100%;
+  }
+
+  .employee-header {
+    align-items: center;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+  }
+
+  .employee-name {
+    font-size: var(--spacing-medium);
+  }
+
+  .accordion-icon {
+    margin-left: 4px;
+  }
+
+  .employee-details dl {
+    grid-template-columns: minmax(0, 15%) minmax(0, 85%);
+  }
+}
+
